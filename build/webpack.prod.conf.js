@@ -12,7 +12,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         }),
         // extract css into its own file
         new webpack.optimize.CommonsChunkPlugin({
-            names: ['myDocJsx',],
+            names: ['myDocJsxPluginTemplate',],
             minChunks: Infinity,
         }),
     ]
