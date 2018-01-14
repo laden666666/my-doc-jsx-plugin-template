@@ -4,7 +4,7 @@
 ## 使用方法
 首先下载该模板，记住尽量不要用 **git clone** 下载该插件，因为这样会生成.git目录，这样会影响你将你的插件上传到git上面。
 
-然后修改 **package.json** 文件，修改里面的 **name** 和 **版本** 。
+然后修改 **package.json** 文件，修改里面的 **name** 、 **main** 和 **版本** 。
 
 修改 **build/webpack.*.conf.js** 里面的插件名称。模板项目的插件名称为 **myDocJsxPluginTemplate** ,你需要将其改为你插件的名字。
 

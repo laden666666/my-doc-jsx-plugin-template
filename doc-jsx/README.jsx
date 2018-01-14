@@ -3,7 +3,7 @@
     <p>{`这是一个`}<a href="https://github.com/laden666666/my-doc-jsx">my-doc-jsx</a>{`的一个插件模板，用于创建`}<strong>my-doc-jsx</strong>{`插件。`}</p>
     <h2>使用方法</h2>
     <p>首先下载该模板，记住尽量不要用<strong>git clone</strong>下载该插件，因为这样会生成.git目录，这样会影响你将你的插件上传到git上面。</p>
-    <p>然后修改<strong>package.json</strong>文件，修改里面的<strong>name</strong>和<strong>版本</strong>。</p>
+    <p>然后修改<strong>package.json</strong>文件，修改里面的<strong>name</strong>、<strong>main</strong>和<strong>版本</strong>。</p>
     <p>修改<strong>build/webpack.*.conf.js</strong>里面的插件名称。模板项目的插件名称为<strong>myDocJsxPluginTemplate</strong>,你需要将其改为你插件的名字。</p>
     <p>修改<strong>src</strong>里面的文件，根据hello world的例子完成你的插件</p>
 

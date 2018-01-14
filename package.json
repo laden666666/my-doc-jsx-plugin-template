@@ -25,8 +25,6 @@
     "url": "https://github.com/laden666666/my-doc-jsx-plugin-template/issues"
   },
   "homepage": "https://github.com/laden666666/my-doc-jsx-plugin-template#readme",
-  "dependencies": {
-  },
   "peerDependencies": {
     "my-doc-jsx": "git+https://github.com/laden666666/my-doc-jsx.git"
   },
