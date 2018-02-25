@@ -1,4 +1,5 @@
 var path = require('path')
+var webpack = require('webpack')
 var projectRoot = path.resolve(__dirname, '../')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
@@ -21,30 +22,37 @@ module.exports = {
         library: '[name]'
     },
     resolve: {
-        extensions: ['', '.js'],
-        fallback: [path.join(__dirname, '../node_modules')],
+        extensions: ['.ts', '.tsx', '.js'], // note if using webpack 1 you'd also need a '' in the array as well
     },
-    resolveLoader: {
-        fallback: [path.join(__dirname, '../node_modules')]
-    },
-    postcss: [ require('autoprefixer')({
-        browsers: ['last 2 versions']
-    })],
     module: {
         loaders: [{
             test: /\.js$/,
-            loader: 'babel',
-            include: projectRoot,
-            exclude: /node_modules/
+            loader: 'babel-loader',
+            include: path.join(__dirname, '../src'),
         }, {
-            test: /\.json$/,
-            loader: 'json'
+            test: /\.ts(x?)$/,
+            include: path.join(__dirname, '../src'),
+            use: [{
+                loader: 'babel-loader',
+            }, {
+                loader: 'ts-loader',
+            }]
         }, {
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract("css-loader")
+            use: ExtractTextPlugin.extract({
+                use: ["css-loader"]
+            })
         }]
     },
     plugins:[
+        new webpack.LoaderOptionsPlugin({
+            // test: /\.xxx$/, // may apply this only for some modules
+            options: {
+                postcss: [ require('autoprefixer')({
+                    browsers: ['last 2 versions']
+                })],
+            }
+        }),
         new ExtractTextPlugin('[name].css'),
     ]
 }

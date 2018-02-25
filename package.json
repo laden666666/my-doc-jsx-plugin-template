@@ -1,13 +1,13 @@
 {
   "name": "my-doc-jsx-plugin-template",
   "version": "0.0.1",
-  "description": "一个基于jsx的文档书写、文档转换工具。使我们能够基于jsx风格书写文档，并将文档渲染为html格式输出。后续会增加md格式输出，甚至是docx格式输出。",
+  "description": "一个my-doc-jsx插件的模块，用于开发my-doc-jsx的插件",
   "main": "dist/myDocJsxPluginTemplate.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "doc": "docjsx c md ./doc-jsx/README.jsx ./ && docjsx c html ./doc-jsx/README.jsx ./",
-    "test": "mocha --compilers js:babel-core/register test/test.js"
+    "test": "cross-env BABEL_ENV=test karma start"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "blog",
     "doc",
     "jsx",
-    "theme"
+    "template"
   ],
   "author": "laden666666",
   "license": "MIT",
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/laden666666/my-doc-jsx-plugin-template#readme",
   "peerDependencies": {
-    "my-doc-jsx": "git+https://github.com/laden666666/my-doc-jsx.git"
+    "my-doc-jsx": "0.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
@@ -39,27 +39,41 @@
     "babel-register": "^6.0.0",
     "babel-runtime": "^6.23.0",
     "chai": "^4.1.2",
-    "chalk": "^1.1.3",
-    "css-loader": "^0.28.8",
+    "chalk": "^2.3.1",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.10",
     "eventsource-polyfill": "^0.9.6",
-    "express": "^4.13.3",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
-    "function-bind": "^1.0.2",
-    "html-webpack-plugin": "^2.8.1",
-    "http-proxy-middleware": "^0.17.2",
-    "mocha": "^4.1.0",
-    "opn": "^4.0.2",
-    "ora": "^0.3.0",
-    "shelljs": "^0.7.7",
-    "webpack": "^1.13.2",
-    "webpack-dev-middleware": "^1.8.3",
-    "webpack-dev-server": "^1.16.2",
-    "webpack-hot-middleware": "^2.12.2",
-    "webpack-merge": "^0.14.1"
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^1.1.9",
+    "function-bind": "^1.1.1",
+    "html-webpack-plugin": "^2.30.1",
+    "http-proxy-middleware": "^0.17.4",
+    "karma": "^2.0.0",
+    "karma-babel-preprocessor": "^7.0.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-webpack": "^2.0.9",
+    "mocha": "^5.0.1",
+    "opn": "^5.2.0",
+    "ora": "^2.0.0",
+    "shelljs": "^0.8.1",
+    "ts-loader": "^3.3.1",
+    "typescript": "^2.7.2",
+    "webpack": "^2.7.0",
+    "webpack-dev-middleware": "^2.0.6",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-merge": "^4.1.2"
   },
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
+  },
+  "dependencies": {
+    "my-doc-jsx": "0.0.4"
   }
 }

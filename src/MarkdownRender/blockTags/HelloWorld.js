@@ -1,13 +1,13 @@
 import docjsx from "my-doc-jsx"
 
-class HelloWorld extends docjsx.BlockTag{
+class HelloWorld extends docjsx.BlockNode{
     constructor(...arg){
         super(...arg)
         this.priority = 0;
     }
 
-    render(){
-        return this.$getChildrenText()
+    render(render){
+        return render.renderChildInlineNodes(this.childPseudoNodes)
     }
 }
 
