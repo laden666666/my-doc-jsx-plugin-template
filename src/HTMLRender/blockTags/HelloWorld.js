@@ -1,14 +1,15 @@
-import docjsx from "my-doc-jsx"
-import './HelloWorld.css'
+import {BlockNode} from "my-doc-jsx"
+var style = require('./HelloWorld.css')
 
-class HelloWorld extends docjsx.BlockNode{
+class HelloWorld extends BlockNode{
     constructor(...arg){
         super(...arg)
         this.priority = 0;
     }
 
     render(render){
-        return `<div class="mydoc_helloWorld">${render.renderChildInlineNodes(this.childPseudoNodes)}</div>`
+        render.setStyle('helloWorld', style)
+        return `<div class="mydoc_helloWorld">${render.renderInlineNodes(this.childPseudoNodes)}</div>`
     }
 }
 

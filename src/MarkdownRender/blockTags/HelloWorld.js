@@ -7,7 +7,7 @@ class HelloWorld extends docjsx.BlockNode{
     }
 
     render(render){
-        return render.renderChildInlineNodes(this.childPseudoNodes)
+        return render.renderInlineNodes(this.childPseudoNodes)
     }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "my-doc-jsx-plugin-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一个my-doc-jsx插件的模块，用于开发my-doc-jsx的插件",
   "main": "dist/myDocJsxPluginTemplate.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/laden666666/my-doc-jsx-plugin-template#readme",
   "peerDependencies": {
-    "my-doc-jsx": "0.0.3"
+    "my-doc-jsx": "^0.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
@@ -58,8 +58,11 @@
     "karma-mocha-reporter": "^2.2.5",
     "karma-webpack": "^2.0.9",
     "mocha": "^5.0.1",
+    "node-sass": "^4.7.2",
     "opn": "^5.2.0",
     "ora": "^2.0.0",
+    "postcss-loader": "^2.1.1",
+    "sass-loader": "^6.0.6",
     "shelljs": "^0.8.1",
     "ts-loader": "^3.3.1",
     "typescript": "^2.7.2",
@@ -72,8 +75,5 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
-  },
-  "dependencies": {
-    "my-doc-jsx": "0.0.4"
   }
 }
