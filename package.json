@@ -17,7 +17,8 @@
     "blog",
     "doc",
     "jsx",
-    "template"
+    "template",
+	"plugin"
   ],
   "author": "laden666666",
   "license": "MIT",
