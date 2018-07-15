@@ -1,7 +1,7 @@
 {
   "name": "my-doc-jsx-plugin-template",
-  "version": "0.0.2",
-  "description": "一个my-doc-jsx插件的模块，用于开发my-doc-jsx的插件",
+  "version": "0.0.3",
+  "description": "A template for the my-doc-jsx plugin for developing my-doc-jsx plugins",
   "main": "dist/myDocJsxPluginTemplate.js",
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -18,7 +18,7 @@
     "doc",
     "jsx",
     "template",
-	"plugin"
+    "plugin"
   ],
   "author": "laden666666",
   "license": "MIT",
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/laden666666/my-doc-jsx-plugin-template#readme",
   "peerDependencies": {
-    "my-doc-jsx": "^0.1.2"
+    "my-doc-jsx": "^0.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
@@ -72,7 +72,8 @@
     "webpack-dev-middleware": "^2.0.6",
     "webpack-dev-server": "^2.11.1",
     "webpack-hot-middleware": "^2.21.0",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
   },
   "engines": {
     "node": ">= 4.0.0",

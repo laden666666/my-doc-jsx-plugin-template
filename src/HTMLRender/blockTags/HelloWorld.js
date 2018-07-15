@@ -7,9 +7,9 @@ class HelloWorld extends BlockNode{
         this.priority = 0;
     }
 
-    render(render){
+    async render(render){
         render.setStyle('helloWorld', style)
-        return `<div class="mydoc_helloWorld">${render.renderInlineNodes(this.childPseudoNodes)}</div>`
+        return `<div class="mydoc_helloWorld">${await render.renderInlineNodes(this.childPseudoNodes)}</div>`
     }
 }
 
